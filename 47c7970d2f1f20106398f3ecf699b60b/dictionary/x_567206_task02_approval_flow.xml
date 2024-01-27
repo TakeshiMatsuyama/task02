@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a0522c1f2f4438106398f3ecf699b62f" label="approval_flow" max_length="40" name="x_567206_task02_approval_flow" type="collection">
+        <element label="Approval flow name" max_length="40" name="approval_flow_name" type="string"/>
+        <element label="一次承認者" max_length="32" name="approver_1" reference="sys_user" type="reference"/>
+        <element label="二次承認者" max_length="32" name="approver_2" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="approver_1"/>
+        </index>
+        <index name="index2">
+            <element name="approver_2"/>
+        </index>
+    </element>
+</database>

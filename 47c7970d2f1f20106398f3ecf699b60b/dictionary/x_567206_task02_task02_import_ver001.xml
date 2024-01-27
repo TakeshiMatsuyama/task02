@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="8f88e8cc2faba0106398f3ecf699b6d2" extends="sys_import_set_row" label="Task02_Import_ver001" max_length="40" name="x_567206_task02_task02_import_ver001" type="collection">
+        <element label="User ID" max_length="40" name="user_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="dummy" max_length="40" name="u_dummy" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=email" label="email" max_length="40" name="u_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=first_name" label="first_name" max_length="40" name="u_first_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=last_name" label="last_name" max_length="40" name="u_last_name" type="string"/>
+        <element attributes="import_attribute_name=u_organization_cd" label="Organization cd" max_length="40" name="u_organization_cd" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_position" label="Position" max_length="40" name="u_position" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_rolegrade" label="Rolegrade" max_length="40" name="u_rolegrade" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="User_ID" max_length="40" name="u_user_id" type="string"/>
+    </element>
+</database>

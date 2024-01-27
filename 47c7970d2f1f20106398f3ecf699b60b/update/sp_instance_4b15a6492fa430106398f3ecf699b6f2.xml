@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">86546e092fa430106398f3ecf699b6eb</sp_column>
+        <sp_widget display_value="KB Categories - KBv3">ee307070d7201200a9addd173e24d4da</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-03 10:38:36</sys_created_on>
+        <sys_id>4b15a6492fa430106398f3ecf699b6f2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>■掲示板カテゴリを選択</sys_name>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sp_instance_4b15a6492fa430106398f3ecf699b6f2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-03 10:39:14</sys_updated_on>
+        <title>■掲示板カテゴリを選択</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"number_of_categories_to_load": {
+		"value": null,
+		"displayValue": ""
+	},
+	"omit_badges": {
+		"value": "",
+		"displayValue": ""
+	},
+	"check_access_per_category": {
+		"value": "",
+		"displayValue": ""
+	},
+	"max_article_limit_for_counts": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=4b15a6492fa430106398f3ecf699b6f2"/>
+</record_update>

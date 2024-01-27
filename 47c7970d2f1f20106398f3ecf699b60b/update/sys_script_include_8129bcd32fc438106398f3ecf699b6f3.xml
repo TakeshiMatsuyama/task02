@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_567206_task02.getApprovalQualifier </api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>getApprovalQualifier </name>
+        <script><![CDATA[var getApprovalQualifier = Class.create();
+getApprovalQualifier.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    //メソッド
+	getQualifier: function() {
+//		gs.addInfoMessage(desc);  //直接コールする際に引数を渡すこともできる
+// 		gs.addInfoMessage('入力パラメータ：' + this.getParameter('sysparm_name'));
+// 		gs.addInfoMessage('入力パラメータ1：' + this.getParameter('sysparm_p1'));
+// 		gs.addInfoMessage('入力パラメータ2：' + this.getParameter('sysparm_p2'));
+// 		gs.addInfoMessage('入力パラメータ3：' + this.getParameter('sysparm_p3'));
+		
+
+// 		if (action) {
+//     		gs.addInfoMessage('actionあります');
+// 		} else {
+//     		gs.addInfoMessage('action無いです！！');
+// 		}
+		//画面遷移やろうとしたけど、うまくいかない・・・！！
+		//var userURL = 'x_567206_task02_task02.do?sys_id=0851558d2fe320106398f3ecf699b679';
+        //action.setRedirectURL(userURL);
+
+//      //------------------------------------		
+// 		//INリストで指定する方法
+// 		var retid = [];
+// 		retid.push('c00b28402feba0106398f3ecf699b69e');
+// 		retid.push('000b28402feba0106398f3ecf699b69f');
+// 		retid.push('4c0b28402feba0106398f3ecf699b69f');
+//		gs.addInfoMessage('Return予定値：' + retid.toString());
+// 		return 'sys_idIN' + retid.toString();	
+//      //------------------------------------		
+        //------------------------------------		
+		//sys_userの役職フィールドで縛る方法
+		//    PL、担当課長、担当部長、事業部長 のクエリ文字列
+		var rec = new GlideRecord('sys_user');
+		gs.addInfoMessage('sys_id：' + gs.getUser().getID());
+		rec.addQuery('sys_id', gs.getUser().getID());
+		rec.query();
+		var orgcd = '';
+//        orgcd = rec.getValue('u_organization_cd');
+		if (rec.next()) {
+			//組織コード（1511とか）を取得
+            orgcd = rec.getValue('u_organization_cd');
+//            orgcd = rec.u_organization_cd;
+		}
+		gs.addInfoMessage('組織コード：' + orgcd);
+        var retqual = 'u_position=PL^ORu_position=担当課長^ORu_position=担当部長^ORu_position=事業部長';
+		if (orgcd) {
+            retqual += '^u_organization_cd=' + orgcd;
+		}
+		gs.addInfoMessage('生成文字列：' + retqual);
+		return retqual;	
+        //------------------------------------		
+
+//     //「d0」で縛るだけ
+//		return 'user_nameSTARTSWITHd0';	
+		
+    },
+
+    type: 'getApprovalQualifier'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-16 06:17:47</sys_created_on>
+        <sys_id>8129bcd32fc438106398f3ecf699b6f3</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>getApprovalQualifier </sys_name>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_script_include_8129bcd32fc438106398f3ecf699b6f3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-16 10:45:53</sys_updated_on>
+    </sys_script_include>
+</record_update>

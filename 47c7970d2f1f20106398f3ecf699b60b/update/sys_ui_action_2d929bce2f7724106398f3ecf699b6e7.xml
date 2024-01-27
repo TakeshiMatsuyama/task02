@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Sv-Script実験</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[(function() {
+	
+	gs.addInfoMessage('Sv-Script実験開始：' + gs.getUser().getID() );  //ユーザーのsys_id
+	gs.addInfoMessage('Sv-Script実験開始：' + gs.getUser().getName().substr(0,2) );  //ユーザーのuser_idの先頭2桁
+	gs.addInfoMessage('Sv-Script実験開始：' + gs.getUser().email );  //ユーザーのemail
+	gs.addInfoMessage('Sv-Script実験開始：' + gs.getUser().getUserRoles());  //ユーザーのロール
+	gs.addInfoMessage('Sv-Script実験開始：' + gs.getProperty('instance_name'));  //インスタンス名が取得できる⇒「dev69389」など
+	
+// 	//GlideDateを使ったほうが簡単だが、GMT時刻が出てきてしまう・・・
+// 	var gd = new GlideDate();
+// 	gs.addInfoMessage('★★GetByFormat Date：' + gd.getByFormat('yyyy-MM-dd HH:mm:ss'));
+
+// 	var gdt = new GlideDateTime();
+// 	var tt = new GlideTime();
+	
+// 	var gdt_date = gdt.getUserFormattedLocalTime();
+// 	var gdt_date_b = tt.getTime();
+// 	gs.addInfoMessage('★★合算a：' + gdt_date );
+// 	gs.addInfoMessage('★★合算tt：' + gdt_date_b );
+// 	gs.addInfoMessage('★★合算a+a：' + gdt_date.add(gdt_date_b) );
+// 	var add_dt = gdt_date.add(gdt.getUserFormattedLocalTime());
+// 	gs.addInfoMessage('★★合算b：' + gdt.getUserFormattedLocalTime() );
+// 	gs.addInfoMessage('★★合算タイム：' + add_dt );
+	
+    var gd = new GlideDate();
+	var gdt = new GlideDateTime();
+	gd.setValue(gdt.localTime);
+    gs.addInfoMessage('★★GetByFormat Date：' + gd.getByFormat('yyyy-MM-dd HH:mm:ss'));
+    gs.addInfoMessage('★★ゲットDATE：' + gdt.getDate());
+    gs.addInfoMessage('★★フォーマットっ度ローカルタイム：' + gdt.getUserFormattedLocalTime());  //「14:54:30」
+    gs.addInfoMessage('★★ローカルタイム：' + gdt.getLocalTime());  //「1970-01-01 14:54:30」
+    gs.addInfoMessage('★★合算タイム：' + gdt.getDate() + ' ' + gdt.getUserFormattedLocalTime());
+    var addstr = gdt.getDate() + ' ' + gdt.getUserFormattedLocalTime();
+	gs.addInfoMessage('■Type：' + typeof addstr);
+	var dtform = 'yyyy-MM-dd HH:mm:ss';
+	gdt.setDisplayValue(addstr, dtform);
+	gs.addInfoMessage('★★★変換後DateTime：' + gdt.getDisplayValue());
+	gs.addInfoMessage('■Type：' + gdt.getDisplayValue());
+	
+	//gs.addInfoMessage('Date：' + gdt.getLocalDate() + ' ' + gdt.getLocalTime());
+	//gs.addInfoMessage('Date：' + gdt.getDate() + ' ' + gdt.getTime());
+	//gs.addInfoMessage('Date：' + gdt.getDate().toString() + ' ' + gdt.getTime().toString());
+	//gs.addInfoMessage('Date：' + gdt.getUserFormattedLocalTime());
+	gs.addInfoMessage('★GetByFormat Date：' + gdt.getDate().getByFormat('yyyy/MM/dd HH:mm:ss'));
+
+	var dform = 'yyyy-MM-dd';
+	var tform = 'yyyy-MM-dd HH:mm:ss';
+	gdt.setDisplayValue(gdt.getDate(), dform);
+	gs.addInfoMessage('準備');
+	gs.addInfoMessage('変換後Date：' + gdt.getDisplayValue());
+	gdt.setDisplayValue(gdt.getTime(), tform);
+	gs.addInfoMessage('変換後Time：' + gdt.getDisplayValue());
+
+	////var isadm = gs.getUser().getUserRoles();
+	var isadm =  ['admin','knowledge_manager','security_admin'];
+
+	var acnt =0;
+	var astt = '';
+	for (var xs in  gs.getUser()) {
+		acnt += 1;
+		if (acnt >= 0) {
+			astt += xs + '\r\n';
+			//astt += xs + '/';
+		}
+	}
+	gs.addInfoMessage('列挙：' + astt + '*num*' + acnt);  //ユーザーのsys_idが取得できる
+
+	
+	//isadm = gs.getUser().getUserRoles().split(',').includes('admin');
+	gs.addInfoMessage(isadm[0] + '動いてる？' );
+	gs.addInfoMessage(isadm[1] + '動いてる？' );
+	gs.addInfoMessage(isadm.includes('admin') + '動いてる？' );
+	if (isadm.split(',').includes('admin')){
+		gs.addInfoMessage('adminです★');
+	} else {
+		gs.addInfoMessage('adminではないです・・・');
+	}
+	//gs.addInfoMessage('Sv-Script実験開始：' + gs.getUser().getID());  //ユーザーのsys_idが取得できる
+
+	var out='';
+    if (typeof gs === "undefined") out += 'gsなし/ ';   
+	if (!(typeof gs.action.getGlideURI().getMap() === "undefined") ) out += 'getMapあり/ ';   //結果：なし
+// 	if (typeof g_reference === "undefined") out += 'g_referenceなし/ ';    //結果：なし
+// 	if (typeof g_form === "undefined") out += 'g_formなし/ ';
+	
+	gs.addInfoMessage(gs.action.getGlideURI().getMap());
+
+	
+})();
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-30 09:45:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2d929bce2f7724106398f3ecf699b6e7</sys_id>
+        <sys_mod_count>83</sys_mod_count>
+        <sys_name>Sv-Script実験</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_ui_action_2d929bce2f7724106398f3ecf699b6e7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-18 07:56:22</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_567206_task02.GetUserInfo_001</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>スクリプトインクルードテスト001</description>
+        <name>GetUserInfo_001</name>
+        <script><![CDATA[var GetUserInfo_001 = Class.create();
+GetUserInfo_001.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    GetUserInfo_001: function() {
+        //var user_id = this.getParameter('sysparm_user_id');
+        var user_name = this.getParameter('sysparm_user_name');
+        var grUser = new GlideRecord('sys_user'); //SystemNowのユーザテーブル（sys_id）を参照する
+        if (grUser.get(user_name)) { //指定したユーザが存在するか確認
+            return grUser.name + '  [' + grUser.user_name + ']'; //存在する場合はメールアドレスを返す
+        }
+        return ''; //存在しない場合は空文字を返す
+    },
+
+    type: 'GetUserInfo_001'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-09 01:41:44</sys_created_on>
+        <sys_id>d58adddb2f9f20106398f3ecf699b63a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetUserInfo_001</sys_name>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_script_include_d58adddb2f9f20106398f3ecf699b63a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-11 11:29:09</sys_updated_on>
+    </sys_script_include>
+</record_update>

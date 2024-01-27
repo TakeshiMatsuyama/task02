@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">4981a6852fa430106398f3ecf699b6a1</sp_column>
+        <sp_widget display_value="Knowledge Bases Browse">abe00f1bdb50320099f93691f0b8f57b</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-03 10:23:50</sys_created_on>
+        <sys_id>f2b1ea852fa430106398f3ecf699b6df</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>■掲示板を選択　｜　新規作成</sys_name>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sp_instance_f2b1ea852fa430106398f3ecf699b6df</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-04 02:19:31</sys_updated_on>
+        <title>■掲示板を選択　｜　新規作成</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"order_by": {
+		"value": "",
+		"displayValue": ""
+	},
+	"order_reverse": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"post_question_label": {
+		"value": "",
+		"displayValue": ""
+	},
+	"create_article_label": {
+		"value": "新規ドキュメント作成",
+		"displayValue": "新規ドキュメント作成"
+	},
+	"post_question_url": {
+		"value": "",
+		"displayValue": ""
+	},
+	"create_article_url": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=f2b1ea852fa430106398f3ecf699b6df"/>
+</record_update>

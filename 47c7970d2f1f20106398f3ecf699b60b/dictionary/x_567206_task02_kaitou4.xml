@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c4ace12e2f88b4106398f3ecf699b66d" extends="task" label="kaitou4" max_length="40" name="x_567206_task02_kaitou4" type="collection">
+        <element label="一次承認者" max_length="32" name="approve01" reference="sys_user" type="reference"/>
+        <element label="二次承認者" max_length="32" name="approve02" reference="sys_user" type="reference"/>
+    </element>
+</database>

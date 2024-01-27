@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="764df4d92f73a0106398f3ecf699b693" extends="task" label="kaitouyouken3" max_length="40" name="x_567206_task02_kaitouyouken3" type="collection">
+        <element choice="3" default="1" label="回答方式" max_length="40" name="ans_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="ファイル" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="フラグ" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="コメント" sequence="3" value="3"/>
+            </choice>
+        </element>
+        <element choice="1" label="回答依頼3コピーフラグ" max_length="40" name="copy_flag" type="string">
+            <choice>
+                <element inactive_on_update="false" label="回答依頼3コピー" sequence="0" value="true"/>
+                <element inactive_on_update="false" label="何もしない" sequence="1"/>
+            </choice>
+        </element>
+        <element choice="3" default="1" label="文書種類" max_length="40" name="document_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="回答依頼" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="テンプレート" sequence="2" value="2"/>
+            </choice>
+        </element>
+    </element>
+</database>

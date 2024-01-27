@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>画面遷移_01</name>
+        <onclick>callSub()</onclick>
+        <order>100</order>
+        <script><![CDATA[function callSub() {
+    var inputs = {};
+
+    //inputs['inp01'] = '★★アクション呼出し1_cl★★'; // String
+    g_form.addInfoMessage('start:' + '引数無し');
+
+	//クライアントから「アクション」を呼びます。スコープはtask02
+	var outputs = GlideFlow.startAction('p_Action_simplemove_01', inputs);
+	//outputsの全メンバ
+	var cnt =0;
+	var stt = '';
+	for (var xs in outputs) {
+		cnt += 1;
+		if (cnt >= 0) {
+			//stt += xs + '\r\n';
+			stt += xs + '/';
+		}
+	}
+	//g_form.setValue('test_str', stt);
+    g_form.addInfoMessage(outputs.length + '//' + stt);
+
+	
+	
+    g_form.addInfoMessage('end「依頼サブフロー呼出し4_cl」です'+ outputs.out01);
+
+// 	var userURL = 'x_567206_task02_kaitouyouken.do?sys_id=';
+// 	action.setRedirectURL(userURL + outputs.output);
+
+	//alert('endです★' + status);
+	//https://dev69389.service-now.com/x_567206_task02_task02.do?sys_id=b341558d2fe320106398f3ecf699b65f
+    //window.open('https://dev69389.service-now.com/x_567206_task02_task02.do?sys_id=b341558d2fe320106398f3ecf699b65f');
+// 	var userURL = 'x_567206_task02_task02.do?sys_id=b341558d2fe320106398f3ecf699b65f';
+// 	action.setRedirectURL(userURL);
+// 	var userURL = 'sys_user.do?sys_id=';
+// 	action.setRedirectURL(userURL + '77fa28402feba0106398f3ecf699b697');
+			
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-22 05:07:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fb0641a72f6f60106398f3ecf699b69e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>画面遷移_01</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_ui_action_fb0641a72f6f60106398f3ecf699b69e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-10-29 09:45:44</sys_updated_on>
+        <table>x_567206_task02_kaitouyouken</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

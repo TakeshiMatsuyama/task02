@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">8a546e092fa430106398f3ecf699b6e9</sp_column>
+        <sp_widget display_value="Knowledge Result">ff26f2b1db12220099f93691f0b8f5ce</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-03 10:36:30</sys_created_on>
+        <sys_id>10a42e092fa430106398f3ecf699b690</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sp_instance_10a42e092fa430106398f3ecf699b690</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-06-03 10:38:07</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"show_relevancy": {
+		"value": "",
+		"displayValue": ""
+	},
+	"hide_category": {
+		"value": "",
+		"displayValue": ""
+	},
+	"knowledge_seperator": {
+		"value": "",
+		"displayValue": ""
+	},
+	"category_seperator": {
+		"value": "",
+		"displayValue": ""
+	},
+	"default_order": {
+		"value": "sys_updated_on:desc",
+		"displayValue": "sys_updated_on:desc"
+	},
+	"attachment_type": {
+		"value": "",
+		"displayValue": ""
+	},
+	"pinned_article_label": {
+		"value": "",
+		"displayValue": ""
+	},
+	"table": {
+		"value": "",
+		"displayValue": ""
+	},
+	"knowledge_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"social_fields": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_secondary_fields_label": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"pagination_type": {
+		"value": "",
+		"displayValue": ""
+	},
+	"articles_per_page": {
+		"value": "",
+		"displayValue": ""
+	},
+	"init_article_count": {
+		"value": "",
+		"displayValue": ""
+	},
+	"scroll_article_count": {
+		"value": "",
+		"displayValue": ""
+	},
+	"no_of_links_in_pagination": {
+		"value": null,
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=10a42e092fa430106398f3ecf699b690"/>
+</record_update>

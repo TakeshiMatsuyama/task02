@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="3ee735262fc8b4106398f3ecf699b63f" label="履歴02" max_length="40" name="x_567206_task02_rireki02" type="collection">
+        <element label="一次承認者" max_length="32" name="approve01" reference="sys_user" type="reference"/>
+        <element label="二次承認者" max_length="32" name="approve02" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="approve01"/>
+        </index>
+        <index name="index2">
+            <element name="approve02"/>
+        </index>
+    </element>
+</database>

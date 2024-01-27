@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>TASK02画面初期セット</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+
+// 	var acname = g_form.getElement('sysverb_delete');   //削除ボタンはこれで取得できる
+//         //onLoadでも非表示にできるが、下のボタンしか消せない・・・！
+// 	acname.style.display = 'none';
+// 	var acname2 = g_form.getElement('sysverb_delete_bottom');   //削除ボタンはこれで取得できる
+//         //onLoadでも非表示にできるが、下のボタンしか消せない・・・！
+// 	acname2.style.display = 'none';
+	
+//----------------------------------------------------------
+// 	try {
+// 		$$('text[id=number').each(function(elmt) {elmt.style.display = 'none';});   //動かず・・・
+//		$$('label[id=x_567206_task02_task02.approval').each(function(elmt) {elmt.style.display = 'none';});   //動かず・・・
+//		$$('label[id=label.x_567206_task02_task02.approval').each(function(elmt) {elmt.style.display = 'none';});   //動かず・・・
+//		$$('select[id=x_567206_task02_task02.approval').each(function(elmt) {elmt.style.display = 'none';});   //動かず・・・
+//		$$('select[id=label.x_567206_task02_task02.approval').each(function(elmt) {elmt.style.display = 'none';});   //動かず・・・
+// 		$$('button[id=getview').each(function(elmt) {elmt.style.display = 'none';});
+// 		$$('button[id=getview_bottom').each(function(elmt) {elmt.style.display = 'none';});
+
+	//削除ボタン非表示
+	if (!g_user.hasRole('admin')){
+		$$('button[id=sysverb_delete]').each(function(elmt) {elmt.style.display = 'none';});
+		$$('button[id=sysverb_delete_bottom]').each(function(elmt) {elmt.style.display = 'none';});		       
+	}
+// 		$$('button[id=sysverb_update').each(function(elmt) {elmt.style.display = 'none';});
+// 		$$('button[id=sysverb_update_bottom').each(function(elmt) {elmt.style.display = 'none';});
+
+
+// 		$$('button[id=sysverb_delete_bottom]').each(function(elmt) {
+// 			elmt.style.display = 'none';
+// 		});
+// 		$$('button[id=sysverb_update]').each(function(elmt) {
+// 			elmt.style.display = 'none';
+// 		});
+// 		$$('button[id=sysverb_update_bottom]').each(function(elmt) {
+// 			elmt.style.display = 'none';
+// 		});
+// 	} catch (e) {}
+
+	
+	//----------------------------------------------------------
+//     changeButtonColor('#f0f8ff');
+
+//     function changeButtonColor(backgroundColor) {
+//         try {
+//             //buttonIDからbuttonを特定して 背景色を変更
+//             //$$('button[id=f4162ac22f3724106398f3ecf699b636]').each(function(elmt) {
+//             $$('button[id=sysverb_delete]').each(function(elmt) {
+//                 //g_form.addInfoMessage('色変えるよ！');
+//                 elmt.style.display = 'none';
+//                 elmt.style.backgroundColor = backgroundColor;
+//                 elmt.style.color = '#ffffff'; //ボタンのテキスト色を変更
+//             });
+//             $$('button[id=sysverb_delete_bottom]').each(function(elmt) {
+//                 //g_form.addInfoMessage('色変えるよ！');
+//                 elmt.style.display = 'none';
+//                 elmt.style.backgroundColor = backgroundColor;
+//                 elmt.style.color = '#ffffff'; //ボタンのテキスト色を変更
+//             });
+//         } catch (e) {}
+//     }
+
+
+
+    //----------------------------------------------------------
+    var uie = g_form.getGlideUIElement('number');
+
+    //var gcbf = g_form.getControlByForm('x_567206_task02_task02');
+    //var gcbf = g_form.getControlByForm('Task02');
+    //alert('？？？数：' + gcbf.length);
+
+    g_form.getControl('dummy_01').style.color = '#222255';
+    g_form.getControl('dummy_01').style.borderInlineColor = '#111111';
+    g_form.getControl('dummy_01').style.borderBlockColor = '#3C2211';
+    g_form.getControl('dummy_01').style.borderBlockWidth = '10pt';
+    g_form.getControl('dummy_01').style.backgroundColor = '#FCC4CC';
+    g_form.getControl('dummy_01').style.height = '80pt';
+    //g_form.getControl('dummy_01').style.columnWidth = '50pt';
+    g_form.getControl('dummy_01').style.fontSize = '14pt';
+
+    g_form.getControl('file_at_01').style.height = '80pt';
+    g_form.getControl('file_at_01').style.fontSize = '14pt';
+    g_form.getControl('file_at_01').style.borderBlockColor = '#3C2211';
+    g_form.getControl('file_at_01').style.borderBlockWidth = '10pt';
+
+    //     g_form.getControl('number').style.color = '#EEAA55';
+    //     g_form.getControl('number').style.borderInlineColor = '#111111';
+    //     g_form.getControl('number').style.borderBlockColor = '#11F43C';
+    //     g_form.getControl('number').style.borderBlockWidth = '5pt';
+    //     g_form.getControl('number').style.backgroundColor = '#FC143C';
+    //     g_form.getControl('number').style.height = '80pt';
+    //     g_form.getControl('number').style.columnWidth = '50pt';
+    //     g_form.getControl('number').style.fontSize = '50pt';
+    //g_form.style.backgroundColor = '#DC143C';
+
+    //alert(g_form.getControl('number').outerHTML); //HTML表記
+    //alert(g_form.getControl('number').getRootNode); //HTML表記
+    // 	var chi='';
+    // 	var nodes = g_form.getControl('number').textContent;
+    // 	for (var i=0;i<nodes.length;i++){
+    // 		chi += nodes[i] + '/ ';
+    // 	}
+    // 	alert(chi.length);
+
+    //alert(Object.keys(g_form.getSectionNames));
+    var sc = g_form.getSections();
+    //alert('セクション数：' + sc.length);
+
+    //////
+    var names = g_form.getSectionNames();
+    var tmp = '';
+    // 	for (var nm in names) {
+    // 		tmp += nm + '/ ';
+    // 	}
+    for (var ct = 0; ct < names.length; ct++) {
+        tmp += names[ct] + '/ ';
+    }
+    g_form.addInfoMessage('セクション名列挙：' + names.length + '// ' + tmp);
+
+    g_form.addInfoMessage('セクション１のid：' + sc[1].id);
+    var cnt = 0;
+    var stt = '';
+    for (var xs in sc[1]) {
+        cnt += 1;
+        if (cnt >= 0) {
+            //stt += xs + '\r\n';
+            stt += xs + '/';
+        }
+    }
+    //g_form.setValue('test_str', stt);
+    g_form.addInfoMessage('sc[1]のメンバ：' + sc[1].length + '\r\n' + stt);
+    //////
+
+    sc[0].style.backgroundColor = '#EE1122';
+    sc[1].style.backgroundColor = '#11EE22';
+    sc[2].style.backgroundColor = '#2211EE';
+
+    sc[1].style.border = '10px';
+
+	//var acname = g_form.getElement('number');
+
+	//acname[10].style.backgroundColor = '#ff2230';
+	//acname.name = '★★★';
+	//acname.visible = false;
+	//acname.setValue('★★★');
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-20 07:06:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>930e477e2fe320106398f3ecf699b6c3</sys_id>
+        <sys_mod_count>69</sys_mod_count>
+        <sys_name>TASK02画面初期セット</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_script_client_930e477e2fe320106398f3ecf699b6c3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-11 02:39:15</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

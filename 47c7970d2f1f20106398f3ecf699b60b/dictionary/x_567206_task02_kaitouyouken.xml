@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="eeb9570d2f1f20106398f3ecf699b636" extends="task" label="Kaitouyouken" max_length="40" name="x_567206_task02_kaitouyouken" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="回答方式" max_length="40" name="ans_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="ファイル" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="フラグ" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="コメント" sequence="2" value="3"/>
+            </choice>
+        </element>
+        <element label="回答要件のコピー新規" max_length="40" name="flg_copy_youken" type="boolean"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="回答者" max_length="1024" name="respondent" reference="sys_user" type="glide_list"/>
+    </element>
+</database>

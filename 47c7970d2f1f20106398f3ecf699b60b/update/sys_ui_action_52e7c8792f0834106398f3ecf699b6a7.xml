@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>CL-Ajaxテスト</name>
+        <onclick>testAjax()</onclick>
+        <order>100</order>
+        <script><![CDATA[function testAjax() {
+
+	var ajax = new GlideAjax('getApprovalQualifier'); 
+	ajax.addParam('sysparm_name', 'getQualifier'); 
+	//ajax.addParam('sysparm_p1', 'p1パラメータ'); 
+	//ajax.addParam('sysparm_user_id', newValue); 
+	ajax.getXMLAnswer(function(answer) {
+		g_form.addInfoMessage('コール成功：');
+
+// 		var st ='';
+// 		for (var x in answer) {
+// 			st += x + '//';
+// 		}
+// 		g_form.addInfoMessage(st);
+		
+		if (answer.length > 0) { 
+			g_form.addInfoMessage(answer);
+			//g_form.setValue('debug_field', answer); 
+		}
+	});
+}
+
+// function testAjax() {
+
+// 	var ajax = new GlideAjax('GetUserInfo'); 
+// 	ajax.addParam('sysparm_name', 'getUserName'); 
+// 	ajax.addParam('sysparm_p1', 'p1パラメータ'); 
+// 	ajax.addParam('sysparm_p2', 'p2パラメータ'); 
+// 	ajax.addParam('sysparm_p3', 'p3パラメータ'); 
+// 	//ajax.addParam('sysparm_user_id', newValue); 
+// 	ajax.getXMLAnswer(function(answer) {
+// 		g_form.addInfoMessage('戻ってきました：');
+// 		g_form.addInfoMessage('これがanswer：' + answer);
+// 		if (answer.length > 0) { 
+// 			//g_form.setValue('debug_field', answer); 
+// 		}
+// 	});
+// }]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-11 10:37:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>52e7c8792f0834106398f3ecf699b6a7</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>CL-Ajaxテスト</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_ui_action_52e7c8792f0834106398f3ecf699b6a7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-14 04:48:27</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

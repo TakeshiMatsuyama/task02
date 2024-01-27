@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="784dde922fdbe0106398f3ecf699b6a3" label="ApprovalGRP" max_length="40" name="x_567206_task02_approvalgrp" type="collection">
+        <element label="Appr_UserID_01" max_length="40" name="appr_userid_01" type="string"/>
+        <element label="Appr_UserID_02" max_length="40" name="appr_userid_02" type="string"/>
+        <element label="Appr_UserID_03" max_length="40" name="appr_userid_03" type="string"/>
+    </element>
+</database>

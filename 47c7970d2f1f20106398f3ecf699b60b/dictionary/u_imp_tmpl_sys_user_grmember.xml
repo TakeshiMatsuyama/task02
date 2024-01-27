@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="7f512d8a2fe720106398f3ecf699b669" extends="sys_import_set_row" label="Imp Tmpl Sys User Grmember" max_length="40" name="u_imp_tmpl_sys_user_grmember" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=group" label="group" max_length="40" name="u_group" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=sys_id" label="sys_id" max_length="40" name="u_sys_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=user" label="user" max_length="40" name="u_user" type="string"/>
+    </element>
+</database>

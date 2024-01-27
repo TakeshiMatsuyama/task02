@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="sys_user_grmember" version="2" view="exp_de7f2d94e2fa720106398f3ecf699b612">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_id</element>
+            <list_id display_value="sys_user_grmember" element="NULL" name="sys_user_grmember" parent="NULL" relationship="NULL" sys_domain="global" view="67f2d94e2fa720106398f3ecf699b616">f7f215422fe720106398f3ecf699b6bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-17 14:10:59</sys_created_on>
+            <sys_id>bff215422fe720106398f3ecf699b6bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-17 14:10:59</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>group</element>
+            <list_id display_value="sys_user_grmember" element="NULL" name="sys_user_grmember" parent="NULL" relationship="NULL" sys_domain="global" view="67f2d94e2fa720106398f3ecf699b616">f7f215422fe720106398f3ecf699b6bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-17 14:10:59</sys_created_on>
+            <sys_id>b7f215422fe720106398f3ecf699b6bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-17 14:10:59</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>user</element>
+            <list_id display_value="sys_user_grmember" element="NULL" name="sys_user_grmember" parent="NULL" relationship="NULL" sys_domain="global" view="67f2d94e2fa720106398f3ecf699b616">f7f215422fe720106398f3ecf699b6bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-17 14:10:59</sys_created_on>
+            <sys_id>3bf215422fe720106398f3ecf699b6bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-17 14:10:59</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="sys_user_grmember" element="NULL" name="sys_user_grmember" parent="NULL" relationship="NULL" sys_domain="global" view="67f2d94e2fa720106398f3ecf699b616">f7f215422fe720106398f3ecf699b6bb</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-17 14:10:59</sys_created_on>
+            <sys_id>bbf215422fe720106398f3ecf699b6bd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-17 14:10:59</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sys_user_grmember</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-04-17 14:10:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f7f215422fe720106398f3ecf699b6bb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_user_grmember</sys_name>
+            <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+            <sys_update_name>sys_ui_list_sys_user_grmember_exp_de7f2d94e2fa720106398f3ecf699b612</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-04-17 14:10:59</sys_updated_on>
+            <sys_user/>
+            <view display_value="Exp_de7f2d94e2fa720106398f3ecf699b612" name="exp_de7f2d94e2fa720106398f3ecf699b612">67f2d94e2fa720106398f3ecf699b616</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

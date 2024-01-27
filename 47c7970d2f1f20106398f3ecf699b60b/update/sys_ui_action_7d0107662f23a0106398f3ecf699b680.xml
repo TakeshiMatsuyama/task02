@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>call_subflow_01</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>サブフロー呼出し</name>
+        <onclick>callSub()</onclick>
+        <order>100</order>
+        <script><![CDATA[//(function() {
+function callSub() {
+    var inputs = {};
+
+    inputs['inpstr'] = '★引数です★'; // String
+    g_form.addInfoMessage('start:' + inputs['inpstr']);
+
+    //GlideFlow.startSubflow('global.p_subflow_test_01', inputs)
+    //GlideFlow.startSubflow('task02.p_subflow_test_01', inputs)
+    GlideFlow.startSubflow('p_subflow_test_02', inputs)
+        .then(function(execution) {
+            g_form.addInfoMessage('execです');
+            //alert('execです★');
+            return execution.awaitCompletion();
+        }, errorResolver)
+        .then(function(completion) {
+            var status = completion.status;
+            g_form.addInfoMessage('completeです');
+            //alert('completeです★' + status);
+            //console.log(status);
+            // Available Outputs:
+            var outputs = completion.outputs;
+            //console.log(outputs);
+        }, errorResolver());
+
+    g_form.addInfoMessage('endです');
+    //alert('endです★' + status);
+	
+    function errorResolver(error) {
+        // Handle errors in error resolver
+        g_form.addInfoMessage('errorです★' + error);
+        //console.error(error);
+    }
+	
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-19 11:29:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7d0107662f23a0106398f3ecf699b680</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>サブフロー呼出し</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_ui_action_7d0107662f23a0106398f3ecf699b680</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-11-18 04:13:49</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

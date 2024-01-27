@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>getview</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>ビュー取得</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[(function() {
+	
+	//gs.actionの全メンバ
+	var cnt =0;
+	var stt = '';
+	for (var xs in gs.action.getGlideURI()) {
+		cnt += 1;
+		if (cnt >= 0) {
+			//stt += xs + '\r\n';
+			stt += xs + '/';
+		}
+	}
+	//g_form.setValue('test_str', stt);
+    gs.addInfoMessage(toString(cnt) + '//' + stt);
+	
+// 	var map = gs.action.getGlideURI().getMap();
+//     gs.addInfoMessage('動いた？');
+//     gs.addInfoMessage(gs.action.length + '/mapのsysparm_view/' +  map.get('sysparm_view'));
+	
+//-------------------
+//gs.action.getGlideURI() は問題なく動作する。異常に長いURIが取得される
+	
+//-------------------
+//ビュー切替、うまくいかなかったソースの数々
+		//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view="null"');
+	//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view="null"');
+	//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view=null');
+	//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view="Default view"');
+	//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view="Default"');
+	//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view=Default view');
+	//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view=Default');
+	//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view=default view');
+	//action.setRedirectURL(userURL + outputs.outid + '&sysparm_view=default');
+    //action.setRedirectURL(userURL + outputs.outid + '&sysparm_view=Template');
+
+	//	var view = g_request.getParameter('sysparm_view');
+	
+	//action.setRedirectURL(userURL + outputs.outid + '&view_type="1"');    //効果無し。ソース保存時にDOM操作の警告が・・・
+	//action.setRedirectURL(userURL + outputs.outid + 'view_type=&sys_original'); //処理は成功するが、レコードが無い
+	//action.setRedirectURL(userURL + outputs.outid + '&view_type=1&sys_original');
+	//action.setRedirectURL(userURL + outputs.outid + "&sysparm_view=''");
+
+//-------------------	
+    var view_name='(default)';
+	var map = gs.action.getGlideURI().getMap();
+	if (map.get('sysparm_view') != null) {
+		view_name= map.get('sysparm_view').toString();
+	}
+
+	//gs.log('View: '+view_name);
+	gs.addInfoMessage('■現在のビュー：' + view_name + ':');
+	//gs.addInfoMessage('現在のビュー：' + view + ':');
+
+	
+})();
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-30 06:31:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f4162ac22f3724106398f3ecf699b636</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>ビュー取得</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_ui_action_f4162ac22f3724106398f3ecf699b636</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-15 04:56:42</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

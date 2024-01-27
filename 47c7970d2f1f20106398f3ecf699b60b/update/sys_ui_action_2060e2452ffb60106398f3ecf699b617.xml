@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>ボタン名！</name>
+        <onclick>getName()</onclick>
+        <order>100</order>
+        <script><![CDATA[// function getName() {
+
+// 	g_form.addInfoMessage('始めます');
+	
+// 	var ele = g_form.getFormElement();
+// 	var cnt =0;
+// 	var stt = '';
+// 	for (cnt; cnt<133;cnt++) {
+// 		//cnt += 1;
+// 		if (cnt >= 0) {
+// 			stt += ele[cnt].name + '\r\n';
+// 			ele[cnt].visible = false;
+// 			//stt += xs + '/';
+// 		}
+// 	}
+// // 	var cnt =0;
+// // 	var stt = ele[0].name + '\r\n' + '';
+// // 	for (var xs in ele) {
+// // 		cnt += 1;
+// // 		if (cnt >= 0) {
+// // 			stt += xs + '\r\n';
+// // 			//stt += xs + '/';
+// // 		}
+// // 	}
+	
+
+// 	g_form.setValue('test_str', stt);
+//     g_form.addInfoMessage('lengthは ' + ele.length);
+//     //g_form.addInfoMessage(ele.length + '//' + stt);
+// 	g_form.setVisible('57dc4c970a0a0b3400f8f0538d3faf94', false);
+
+// }
+
+
+// jQuery部分で動かず！！！
+function getName() {
+     //resolve incidentボタンの色を変える
+	changeButtonColor('#f0f8ff');
+     //aaaaaaaaaボタンの色を変える
+     //changeButtonColor('#ffffe0');
+}
+//第一引数:buttonID=>UI ActionでのAction nameの値,を指定
+//第二引数:カラーコードを指定
+//カラーコード:https://www.colordic.org/
+function changeButtonColor(backgroundColor) {
+     try{
+           //buttonIDからbuttonを特定して 背景色を変更
+           //$$('button[id=f4162ac22f3724106398f3ecf699b636]').each(function(elmt) {
+           $$('button[id=57dc4c970a0a0b3400f8f0538d3faf94]').each(function(elmt) {
+                 g_form.addInfoMessage('色変えるよ！');
+                 elmt.style.backgroundColor = backgroundColor;
+                 elmt.style.color = '#ffffff'; //ボタンのテキスト色を変更
+           });
+     }catch(e){}
+}
+		
+// function getName() {
+	
+// 	var ele = g_form.getElement('sysverb_delete');
+// 	alert(ele);
+
+// 	var cnt =0;
+// 	var stt = '';
+// 	for (var xs in ele) {
+// 		cnt += 1;
+// 		if (cnt >= 0) {
+// 			//stt += xs + '\r\n';
+// 			stt += xs + '/';
+// 		}
+// 	}
+// 	//g_form.setValue('test_str', stt);
+//     g_form.addInfoMessage(ele.length + '//' + stt);
+// 	g_form.setVisible('57dc4c970a0a0b3400f8f0538d3faf94', false);
+//}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-27 03:35:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2060e2452ffb60106398f3ecf699b617</sys_id>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>ボタン名！</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_ui_action_2060e2452ffb60106398f3ecf699b617</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-08 06:22:09</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

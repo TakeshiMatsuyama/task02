@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Cl-Script実験</name>
+        <onclick>clTest()</onclick>
+        <order>100</order>
+        <script><![CDATA[function clTest() {
+
+	//操作者のsys_idと参照フィールドのsys_id
+	g_form.addInfoMessage('sys_id：'  + g_user.userID + '///' + g_form.getValue('assigned_to'));
+	//g_form.addInfoMessage('ロール持ってる？'  + g_user.hasRole('admin'));
+	
+	//user参照してsys_idを取得する
+    g_form.getReference('assigned_to', setUserInfo); //参照フィールドuserのレコードを取得してsetUserInfoを呼び出す
+
+//こんなことしなくても、参照フィールドはg_form.getValue()でそのままsys_idを取得できる・・・
+//     function setUserInfo(user) { //ユーザ情報をフィールドuser_infoに設定する
+//         //g_form.setValue('user_info', user.name + '  [' + user.employee_number + ']');
+// 		var sss ='start/';
+// 		for (var xa in user ) {
+// 			sss += xa + '/ ';
+// 		}
+// 		g_form.addInfoMessage('■getReference　でsys_id取得■：', user.getValue('sys_id') + '/ ' + sss);
+//    }
+
+	var ap = ['admin','knowledge_manager','security_admin'];
+    g_form.addInfoMessage(ap[1]);
+    g_form.addInfoMessage(ap.includes('admin') + '★★');
+
+	var acnt =0;
+	var astt = '';
+	for (var xs in ap) {
+		acnt += 1;
+		if (acnt >= 0) {
+			astt += xs + '\r\n';
+			//stt += xs + '/';
+		}
+	}
+	g_form.setValue('test_str', astt);
+	
+	//var acname = g_form.getElement('getview');   //.style.・・・によって、下のボタンの色が変わる！！
+	//var acname = g_form.getElement('sys_display.x_567206_task02_task02.parent'); //参照フィールドはこのフルネームで指定する！！
+	var acname = g_form.getElement('sysverb_delete');   //削除ボタンはこれで取得できるが、各種設定が何もできない！！
+	//var acname = g_form.getElement('57dc4c970a0a0b3400f8f0538d3faf94');   //こちらのsys_idでは取得できなかった・・・
+	//var acname = g_form.getElement('sys_display.x_567206_task02_task02.assigned_to');  //これはOKなのに・・・
+	//var acname = g_form.getElement('label.x_567206_task02_task02.assigned_to');  //labelはそもそも取得してくれない
+	//var acname = g_form.getElement('5ea85bc92f7f60106398f3ecf699b651');  //フォームのROWを丸ごと撮ろうとしたがダメ
+	//var acname = g_form.getElementByID('5ea85bc92f7f60106398f3ecf699b651');  //コマンド替えてもダメ
+	//var acname = g_form.getElementByID('approval');
+	//var acname = g_form.getElementByID('x_567206_task02_task02.approval');
+	//var acname = g_form.getElementByID('element.x_567206_task02_task02.approval');
+	//var acname = g_form.getElementByID('label.x_567206_task02_task02.approval');
+	//var acname = g_form.getElementByID('status.x_567206_task02_task02.approval');
+	//var acname = g_form.getElementByID('x_567206_task02_task02.approval_set');
+	//var acname = g_form.getElementByID('status.x_567206_task02_task02.approval_set');
+	//var acname = g_form.getElementByID('x_567206_task02_task02.approval_set');
+	//var acname = g_form.getElementByID('approval_set');
+	//var acname = g_form.getElementByID('label.x_567206_task02_task02.approval_set');
+	//var acname = g_form.getElementByID('element.x_567206_task02_task02.approval_set');
+
+	//var acname = g_form.getElement('sys_display.x_567206_task02_task02.cmdb_ci');  //これはOKなのに・・・
+
+	g_form.addInfoMessage('element:' + acname);
+	
+	var cnt =0;
+	var stt = '';
+	for (var xs in acname) {
+		cnt += 1;
+		if (cnt >= 0) {
+			stt += xs + '\r\n';
+			//stt += xs + '/';
+		}
+	}
+	acname.setValue('★★★');
+	//g_form.setValue('test_str', stt);
+    g_form.addInfoMessage('lengthは ' + acname.innerHTML + '/ 名前は：' + acname.outerHTML + '/');
+    g_form.addInfoMessage('lengthは ' + acname.value + '/ 名前は：' + acname.style + '/');
+//     g_form.addInfoMessage('lengthは ' + acname.length + '/ 名前は：' + acname[2].enable + '/');
+//     g_form.addInfoMessage('lengthは ' + acname.length + '/ 名前は：' + acname[3].enable + '/');
+//     g_form.addInfoMessage('lengthは ' + acname.length + '/ 名前は：' + acname[4].enable + '/');
+//     g_form.addInfoMessage('lengthは ' + acname.length + '/ 名前は：' + acname[5].enable + '/');
+    //g_form.addInfoMessage(ele.length + '//' + stt);
+	//g_form.setVisible('57dc4c970a0a0b3400f8f0538d3faf94', false);
+	acname.style.backgroundColor = '#ff2230';
+	acname.style.display = 'none';
+	//acname.style.enable = false;
+	
+	
+	//----------------
+	var out='';
+	if (typeof g_url === "undefined") out += 'g_urlなし/ '; 
+	if (typeof g_reference === "undefined") out += 'g_referenceなし/ '; 
+	if (typeof g_form === "undefined") out += 'g_formなし/ ';
+	
+	g_form.addInfoMessage(out);
+	
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-30 09:22:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b2248f862f7724106398f3ecf699b6e8</sys_id>
+        <sys_mod_count>100</sys_mod_count>
+        <sys_name>Cl-Script実験</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_ui_action_b2248f862f7724106398f3ecf699b6e8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-08-26 05:45:32</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

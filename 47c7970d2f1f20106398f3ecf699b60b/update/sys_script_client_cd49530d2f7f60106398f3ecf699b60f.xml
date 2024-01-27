@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>2種類切替え</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+    //g_form.parent.visible = false;
+    //g_form.setVisible('parent', false);
+    g_form.setDisplay('parent', false);
+    g_form.setDisplay('u_refnum', false);
+    g_form.setDisplay('u_journal_2', false);
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-27 07:47:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cd49530d2f7f60106398f3ecf699b60f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>2種類切替え</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_script_client_cd49530d2f7f60106398f3ecf699b60f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-25 07:35:21</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

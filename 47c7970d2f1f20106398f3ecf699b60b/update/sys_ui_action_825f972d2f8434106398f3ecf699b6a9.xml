@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>approve_on_list</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>false</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>true</list_action>
+        <list_banner_button>true</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>true</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>リストから一括更新</name>
+        <onclick>listAction()</onclick>
+        <order>100</order>
+        <script><![CDATA[//クライアント側
+function listAction() {
+
+	var ajax = new GlideAjax('GetUserInfo'); 
+
+	//var lis1 = GlideList2.getListsForTable('x_567206_task02_task02');
+	var lis1 = GlideList2.get('x_567206_task02_task02');
+	var lis2 = g_list.getChecked();
+	//alert(lis2);
+	var lis3 = '';
+	for (var xa in lis1) {
+		lis3 += xa + '/ ';
+	}
+	
+    //var lis = g_list.getChecked();
+	//var lis = typeof g_list;
+// 	if ( typeg_list) {
+// 		lis = 'g_list存在せず';
+// 	} else {
+// 		lis = 'g_listあります！';
+// 	}
+		ajax.addParam('sysparm_name','getUserName'); 
+		ajax.addParam('sysparm_p1',lis1); 
+		ajax.addParam('sysparm_p2',lis2); 
+		ajax.addParam('sysparm_p3',lis3); 
+	//ajax.addParam('sysparm_name', 'getUserName'); 
+	//ajax.addParam('sysparm_user_id', newValue); 
+	ajax.getXMLAnswer(function(answer) {
+		if (answer.length > 0) { 
+			//g_form.setValue('debug_field', answer); 
+		}
+	});
+	
+// 	var list = GlideList2.getListsForTable('x_567206_task02_task02');
+//     list.addInfoMessage('おおおお');
+	
+// 	var aaa = g_list.getChecked();
+// 	g_list.addInfoMessage('ああああ');
+// 	list.addInfoMessage('開始します');
+// // 	var list = GlideList2.get('x_567206_task02_task02');
+// // 	list.addInfoMessage('開始します');
+// 	var chk = g_list.getChecked();
+// 	g_form.addInfoMessage('リスト' + chk);
+	
+
+	//サーバー側処理へ引継ぎ
+	//▲▼ここ、「g_list」じゃだめじゃないのか？？？
+	//////gsftSubmit(null, g_list.getFormElement(),'send_back_request');
+
+}
+
+// //windowが"undefined"ならサーバー側関数を実行。
+// if (typeof window == 'undefined')
+//     serverSendBack();
+
+// //（サーバー側）
+// function serverSendBack() {
+
+// 	gs.addInfoMessage('▲クライアント⇒▲Ajax⇒▲サーバー　まで動きました！！');
+// 	var userURL = 'x_567206_task02_task02.do?sys_id=0851558d2fe320106398f3ecf699b679';
+// 	action.setRedirectURL(userURL);
+//     // https://dev69389.service-now.com/nav_to.do?uri=x_567206_task02_task02.do?sys_id=0851558d2fe320106398f3ecf699b679
+
+// }
+
+
+//以下、Serverスクリプトでの失敗一覧
+//動いた/// var sysListCtrl = new GlideSysListControl("x_567206_task02_task02");
+//しかし、ScopedServerAPIではcheekedlistを取得することが出来ない！！
+
+//var listid = gs.GlideList2.get('x_567206_task02_task02');
+//var listid = GlideList2.get('x_567206_task02_task02');
+//var listid = GlideList2.get('x_567206_task02_task02.All');
+//var listid = GlideList2.get('x_567206_task02_task02.task02');
+//var listid = gs.GlideList2.get('0869574d2f1f20106398f3ecf699b6f0');
+//var listid = GlideList3.get('39f877f02f2320106398f3ecf699b6df');
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-11 07:39:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>825f972d2f8434106398f3ecf699b6a9</sys_id>
+        <sys_mod_count>61</sys_mod_count>
+        <sys_name>リストから一括更新</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_ui_action_825f972d2f8434106398f3ecf699b6a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-09-09 06:40:57</sys_updated_on>
+        <table>x_567206_task02_task02</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

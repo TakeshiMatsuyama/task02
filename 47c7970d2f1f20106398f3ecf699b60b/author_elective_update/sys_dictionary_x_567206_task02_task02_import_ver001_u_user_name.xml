@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="u_user_name" table="x_567206_task02_task02_import_ver001">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>edge_encryption_enabled=true</attributes>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>user_name</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>u_user_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="String">string</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <name>x_567206_task02_task02_import_ver001</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-17 10:13:46</sys_created_on>
+        <sys_id>05bcdc062f2720106398f3ecf699b60e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>user_name</sys_name>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_dictionary_x_567206_task02_task02_import_ver001_u_user_name</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-17 10:13:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="task02">47c7970d2f1f20106398f3ecf699b60b</application>
+        <file_path/>
+        <instance_id>cb2feea5dbfb5f004f035d00cf9619ab</instance_id>
+        <instance_name>dev69389</instance_name>
+        <name>sys_dictionary_x_567206_task02_task02_import_ver001_u_user_name</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="u_user_name" table="x_567206_task02_task02_import_ver001"><active>true</active><array>false</array><array_denormalized>false</array_denormalized><attributes>edge_encryption_enabled=true</attributes><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>user_name</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>false</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>u_user_name</element><element_reference>false</element_reference><foreign_database/><function_definition/><function_field>false</function_field><internal_type display_value="String">string</internal_type><mandatory>false</mandatory><max_length>40</max_length><name>x_567206_task02_task02_import_ver001</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><sizeclass/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-04-17 10:13:46</sys_created_on><sys_id>05bcdc062f2720106398f3ecf699b60e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>user_name</sys_name><sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package><sys_policy/><sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope><sys_update_name>sys_dictionary_x_567206_task02_task02_import_ver001_u_user_name</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-04-17 10:13:46</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>1883296370</payload_hash>
+        <record_name>Task02_Import_ver001.user_name</record_name>
+        <reverted_from/>
+        <source>cfc7970d2f1f20106398f3ecf699b60c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-17 10:13:47</sys_created_on>
+        <sys_id>0dbcdc062f2720106398f3ecf699b621</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>178df5278660000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-17 10:13:47</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>85bcdc06b1272010c0034a453401b021</update_guid>
+        <update_guid_history>85bcdc06b1272010c0034a453401b021:1883296370,ef5c98066127201096fc693d0692678c:455116803,262e8c8611e320109b61370dc570ff49:1883296370,4d1dcc46c9e3201089a2415ce86266d4:455116803,adb6c48e1aa3201082e7a16bf8ebf984:1883296370</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-17 10:40:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>803b7abc56ea447b9f64950ca0503951</sys_id>
+        <sys_metadata>05bcdc062f2720106398f3ecf699b60e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>user_name</sys_name>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_parent display_value="Task02_Import_ver001">8f88e8cc2faba0106398f3ecf699b6d2</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_scope_delete display_value="">29b0e668249448809ec6e54c2869cf10</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_567206_task02_task02_import_ver001_u_user_name</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_567206_task02_task02_import_ver001_u_user_name">0dbcdc062f2720106398f3ecf699b621</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-17 10:40:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_567206_task02.getDTSUser</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>getDTSUser</name>
+        <script><![CDATA[var getDTSUser = Class.create();
+getDTSUser.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    //メソッド
+	getList: function() {
+//		gs.addInfoMessage(desc);  //直接コールする際に引数を渡すこともできる
+// 		gs.addInfoMessage('入力パラメータ：' + this.getParameter('sysparm_name'));
+// 		gs.addInfoMessage('入力パラメータ1：' + this.getParameter('sysparm_p1'));
+// 		gs.addInfoMessage('入力パラメータ2：' + this.getParameter('sysparm_p2'));
+// 		gs.addInfoMessage('入力パラメータ3：' + this.getParameter('sysparm_p3'));
+
+		var rec = new GlideRecord('sys_user');
+		rec.addQuery('sys_id', gs.getUser().getID());
+		rec.query();
+
+		var orgcd = '';
+		if (rec.next()) {
+			//組織コード（1511とか）を取得
+            orgcd = rec.getValue('u_organization_cd');
+		}
+		gs.addInfoMessage('組織コード：' + orgcd);
+		if (orgcd) {
+            retqual = 'u_organization_cd=' + orgcd;
+		}
+		gs.addInfoMessage('生成文字列：' + retqual);
+		return retqual;	
+        //------------------------------------		
+
+//     //「d0」で縛るだけ
+//		return 'user_nameSTARTSWITHd0';	
+		
+    },
+
+    type: 'getDTSUser'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-05-17 10:39:38</sys_created_on>
+        <sys_id>e36147ef2f8478106398f3ecf699b646</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>getDTSUser</sys_name>
+        <sys_package display_value="task02" source="x_567206_task02">47c7970d2f1f20106398f3ecf699b60b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="task02">47c7970d2f1f20106398f3ecf699b60b</sys_scope>
+        <sys_update_name>sys_script_include_e36147ef2f8478106398f3ecf699b646</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-05-17 10:57:22</sys_updated_on>
+    </sys_script_include>
+</record_update>
